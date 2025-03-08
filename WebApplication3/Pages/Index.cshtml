@@ -1,0 +1,21 @@
+﻿@page
+@model CollegeTeamsRazor.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- #1 Heading Section -->
+<section>
+    <h1>NCAA Basketball Teams</h1>
+    <p>Explore information about colleges in NCAA Basketball.</p>
+</section>
+
+<!-- #3 The list of team cards -->
+<section class="teams-list">
+    @foreach (var team in Model.Teams)
+    {
+        <!-- #2 The team card partial -->
+        <partial name="_TeamCard" model="team" />
+    }
+</section>
